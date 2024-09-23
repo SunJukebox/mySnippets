@@ -1,4 +1,5 @@
-local username = vim.env.USER:gsub("^%l", string.upper)
+local username = vim.env.USER or vim.env.USERNAME
+username = username:gsub("^%l", string.upper)
 
 --- Options for marks to be used in a TODO comment
 local marks = {
